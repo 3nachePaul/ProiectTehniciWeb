@@ -1,0 +1,49 @@
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 5px inset var(--coffee-brown);
+}
+
+caption {
+    caption-side: bottom;
+    font-style: italic;
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--coffee-brown);
+}
+
+th,
+td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid var(--beige);
+    color: var(--coffee-brown);
+}
+
+thead {
+    background-color: var(--beige);
+    color: var(--coffee-brown);
+}
+
+tbody tr:nth-child(odd) {
+    border-top: 1px solid var(--cream);
+}
+
+tbody tr:nth-child(even) {
+    border-top: 1px solid var(--beige);
+}
+
+tbody tr:hover {
+    outline: 5px solid rgba(111, 78, 55, 0.3);
+    transition: outline-color 0.5s ease;
+}
+
+@media (max-width: 767px) {
+    .table-container {
+        overflow-x: auto;
+    }
+}

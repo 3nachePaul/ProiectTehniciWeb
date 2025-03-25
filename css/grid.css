@@ -1,0 +1,191 @@
+:root {
+    --page-margin-large: 2rem;
+    --page-margin-medium: 1rem;
+    --page-margin-small: 0.5rem;
+    --grid-gap-large: 1rem;
+    --grid-gap-medium: 0.5rem;
+    --grid-gap-small: 0.25rem;
+    --padding: 1rem;
+    --bg-color-header: #f0f0f0;
+    --bg-color-footer: #f0f0f0;
+    --bg-color-sections: #ffffff;
+    --border-radius: 0.5rem;
+    --box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+main > section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    transition: font-size 0.3s ease;
+}
+
+header {
+    font-family: 'Inconsolata', monospace;
+    background-color: var(--bg-color-header);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 0 var(--page-margin-large);
+}
+
+footer {
+    background-color: var(--bg-color-footer);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 0 var(--page-margin-large);
+}
+
+h2 {
+    transition: font-size 0.3s ease;
+}
+
+h3 {
+    transition: font-size 0.3s ease;
+}
+
+p {
+    transition: font-size 0.3s ease;
+}
+
+img, video {
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+    height: auto;
+}
+
+@media (min-width: 1200px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "area1 area1 area1 area1"
+            "area8 area8 area8 area8"
+            "area3 area2 area2 area4"
+            "area5 area6 area7 area7";
+    }
+
+    #about-us { grid-area: area1; }
+    #table { grid-area: area2; }
+    #events { grid-area: area3; }
+    #announcements { grid-area: area4; }
+    #onlineUsers { grid-area: area5; }
+    #userAndStatistics { grid-area: area6; }
+    #siteAndServerInfo { grid-area: area7; }
+    #extra { grid-area: area8; }
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas:
+            "area1 area1"
+            "area8 area8"
+            "area3 area2"
+            "area4 area5"
+            "area6 area7";
+    }
+
+    #about-us { grid-area: area1; }
+    #table { grid-area: area2; }
+    #events { grid-area: area3; }
+    #announcements { grid-area: area4; }
+    #onlineUsers { grid-area: area5; }
+    #userAndStatistics { grid-area: area6; }
+    #siteAndServerInfo { grid-area: area7; }
+    #extra { grid-area: area8; }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "area1"
+            "area8"
+            "area3"
+            "area2"
+            "area4"
+            "area5"
+            "area6"
+            "area7";
+    }
+
+    #about-us { grid-area: area1; }
+    #table { grid-area: area2; }
+    #events { grid-area: area3; }
+    #announcements { grid-area: area4; }
+    #onlineUsers { grid-area: area5; }
+    #userAndStatistics { grid-area: area6; }
+    #siteAndServerInfo { grid-area: area7; }
+    #extra { grid-area: area8; }
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    body {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
