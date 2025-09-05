@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <%- include('../fragmente/head') %>
+    <title>Eroare - <%= titlu %></title>
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 50px;
+        }
+        .error-container img {
+            max-width: 300px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../fragmente/header') %>
+    <main>
+        <div class="error-container">
+            <h1><%= titlu %></h1>
+            <p><%= text %></p>
+            <img src="<%= imagine %>" alt="Imagine eroare">
+            <p>IP-ul dumneavoastră este: <%= ip %></p>
+        </div>
+    </main>
+    <%- include('../fragmente/footer') %>
+</body>
+</html>

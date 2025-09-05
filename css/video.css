@@ -1,3 +1,33 @@
+/* Stil pentru containerul video principal */
+.video-container-propriu {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.video-container-propriu video {
+    width: 90%; /* Latime procentuala */
+    max-width: 800px; /* Latime maxima */
+    min-width: 300px; /* Latime minima */
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Stil pentru subtitrarile VTT */
+.video-container-propriu video::cue {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--coffee-brown, #6F4E37);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Stil pentru textul de introducere centrat */
+.video-container-propriu video::cue(.intro) {
+    align-items: center;
+    line-height: 50%;
+}
+
+/* Codul vechi pentru iframe-uri - il puteti pastra sau sterge daca nu mai e relevant */
 .video-flex-container {
     display: flex;
     position: relative;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,22 +18,41 @@
     <link rel="stylesheet" href="../css/video.css">
     <link rel="stylesheet" href="../css/arrow.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="watermark">
+        <b>Enache<br>Paul</b>
+    </div>
     <header>
         <h1>Our Coffee Shop</h1>
-        <nav>
+        <input type="checkbox" id="hamburger-toggle" class="hamburger-checkbox">
+        <label for="hamburger-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="main-nav">
             <ul>
-                <li><a href="#">Home</a>
-                    <ul>
+                <li>
+                    <a href="#top" class="home-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                    <ul class="submenu">
                         <li><a href="#about-us">About Us</a></li>
                         <li><a href="#table">Menu</a></li>
                         <li><a href="#special-offers">Special Offers</a></li>
                         <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Galerii</a>
+                    <ul class="submenu">
+                        <li><a href="galerie-statica.html">Galerie Statică</a></li>
+                        <li><a href="galerie-dinamica.html">Galerie Dinamică</a></li>
                     </ul>
                 </li>
                 <li><a href="#about-us">About Us</a></li>
@@ -131,8 +150,7 @@
 
         <section id="events">
             <h2>Events</h2>
-            <!-- Content for Events section -->
-        </section>
+            </section>
 
         <section id="announcements">
             <h2>Announcements</h2>
@@ -152,7 +170,7 @@
                         <mfrac>
                             <mrow>
                                 <mi style="color: var(--warm-orange);">E</mi>
-                                <mo>&#x2212;</mo>
+                                <mo>−</mo>
                                 <mi style="color: var(--dark-green);">S</mi>
                             </mrow>
                             <mi style="font-weight: bold;">V</mi>
@@ -193,18 +211,15 @@
 
         <section id="onlineUsers">
             <h2>Online Users</h2>
-            <!-- Content for Online Users section -->
-        </section>
+            </section>
 
         <section id="userAndStatistics">
             <h2>User and Statistics</h2>
-            <!-- Content for User and Statistics section -->
-        </section>
+            </section>
 
         <section id="siteAndServerInfo">
             <h2>Site and Server Info</h2>
-            <!-- Content for Site and Server Info section -->
-        </section>
+            </section>
 
         <section id="extra">
             <h2>Extra</h2>
@@ -250,7 +265,7 @@
         </section>
     </details>
 
-    <details>
+    <details id="special-offers">
         <summary>Special Offers This Week</summary>
         <section>
             <h3>Monday - Coffee and Cake Deal</h3>
@@ -278,7 +293,7 @@
         </section>
     </details>
 
-    <footer>
+    <footer id="contact">
         <h2>Contact Us<i class="fa-duotone fa-solid fa-mug-hot" style="--fa-primary-color: #844d01; --fa-secondary-color: #844d01;"></i></h2>
         <p>Get in touch with us for more information.</p>
         <i class="fa-solid fa-cookie fa-spin-pulse"></i>
@@ -291,10 +306,11 @@
         </address>
         <p>You can do <a href="https://contexto.me/" target="_blank">This</a> while you wait for your order.</p>
         <p><a href="#top">Back to top</a></p>
-        <small>&copy; Copyright <time datetime="2025-03-25">25 martie 2025</time></small>
+        <small>© Copyright <time datetime="2025-03-25">25 martie 2025</time></small>
+        <p class="print-banner">Acesta este un proiect școlar!</p>
     </footer>
     <a href="#top" id="link-top" aria-label="Back to top">
-        <p>&#8593;</p>
+        <p>↑</p>
     </a>
 </body>
 </html>

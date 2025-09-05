@@ -1,0 +1,23 @@
+WEBVTT
+
+STYLE
+::cue {
+background: rgba(255, 255, 255, 0.3);
+color: var(--coffee-brown, #6F4E37);
+}
+::cue(.intro) {
+align: middle;
+line: 50%;
+}
+
+00:00:00.000 --> 00:00:05.000
+<c.intro><b>Making coffee with an espresso machine</b><br>A short guide</c>
+
+00:00:07.000 --> 00:00:12.000
+The first step is grinding the freshly roasted coffee beans.
+
+00:00:15.000 --> 00:00:20.000
+Then, the ground coffee is tamped evenly into the portafilter.
+
+00:00:22.000 --> 00:00:27.000
+The perfect extraction takes between 25 and 30 seconds.

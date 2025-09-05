@@ -1,0 +1,23 @@
+WEBVTT
+
+STYLE
+::cue {
+background: rgba(255, 255, 255, 0.3);
+color: var(--coffee-brown, #6F4E37);
+}
+::cue(.intro) {
+align: middle;
+line: 50%;
+}
+
+00:00:00.000 --> 00:00:05.000
+<c.intro><b>Prepararea cafelei la espressor</b><br>Un scurt ghid</c>
+
+00:00:07.000 --> 00:00:12.000
+Primul pas este măcinarea boabelor de cafea proaspăt prăjite.
+
+00:00:15.000 --> 00:00:20.000
+Apoi, cafeaua măcinată se presează uniform în portafiltru.
+
+00:00:22.000 --> 00:00:27.000
+Extracția perfectă durează între 25 și 30 de secunde.
