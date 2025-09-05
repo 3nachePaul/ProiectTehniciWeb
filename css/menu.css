@@ -28,6 +28,16 @@ body {
     opacity: 0.8;
   }
 }
+
+/* CORECTIE: Asiguram ca header-ul se comporta corect */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative; /* Necesar pentru pozitionarea hamburger-ului */
+}
+
 /* Stil de baza pentru navigare */
 .main-nav {
   background-color: var(--menu-bg-color);
@@ -40,7 +50,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: flex; /* CORECTIE: Asiguram display flex pentru meniul orizontal */
   justify-content: center;
   align-items: center;
 }
@@ -78,6 +88,7 @@ body {
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
   min-width: 100%;
   white-space: nowrap;
+  z-index: 10; /* Asiguram ca submeniul apare peste alte elemente */
 }
 .main-nav ul li .submenu li a {
   font-size: 1rem;
@@ -133,16 +144,26 @@ body {
     font-size: 1.5rem;
   }
 }
+
 /* Stiluri pentru ecrane mici (cu bonusuri) */
 @media (max-width: 767px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--menu-bg-color);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 100;
+  }
+  .main-nav ul {
+    flex-direction: column; /* Meniul devine vertical */
+    padding-top: 5rem;
+    align-items: flex-start;
   }
 
-  /* Bonus1 etapa 3: Stilul pentru containerul hamburger */
   .hamburger-label {
     display: flex;
     flex-direction: column;
@@ -166,62 +187,19 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
-  .hamburger-label span:nth-child(1) {
-    top: 0;
-  }
-  .hamburger-label span:nth-child(2) {
-    top: 9px;
-  }
-  .hamburger-label span:nth-child(3) {
-    top: 18px;
-  }
+  .hamburger-label span:nth-child(1) { top: 0; }
+  .hamburger-label span:nth-child(2) { top: 9px; }
+  .hamburger-label span:nth-child(3) { top: 18px; }
 
-  /* Bonus3 etapa 3: Generarea delay-urilor succesive */
-  .hamburger-label span:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  .hamburger-label span:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  .hamburger-label span:nth-child(3) {
-    animation-delay: 0.6s;
-  }
+  .hamburger-label span:nth-child(1) { animation-delay: 0.2s; }
+  .hamburger-label span:nth-child(2) { animation-delay: 0.4s; }
+  .hamburger-label span:nth-child(3) { animation-delay: 0.6s; }
 
-  .main-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100%;
-    background-color: var(--menu-bg-color);
-    transform: translateX(100%);
-    transition: transform 0.4s ease-in-out;
-    z-index: 100;
-  }
-  .main-nav ul {
-    flex-direction: column;
-    padding-top: 5rem;
-    align-items: flex-start;
-  }
-  .main-nav ul li a {
-    font-size: 1.1rem;
-  }
-
-  .hamburger-checkbox:checked ~ .hamburger-label span {
-    animation: none;
-  }
-  .hamburger-checkbox:checked ~ .hamburger-label span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .hamburger-checkbox:checked ~ .hamburger-label span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger-checkbox:checked ~ .hamburger-label span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
-  .hamburger-checkbox:checked ~ .main-nav {
-    transform: translateX(0);
-  }
+  .hamburger-checkbox:checked ~ .hamburger-label span { animation: none; }
+  .hamburger-checkbox:checked ~ .hamburger-label span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .hamburger-checkbox:checked ~ .hamburger-label span:nth-child(2) { opacity: 0; }
+  .hamburger-checkbox:checked ~ .hamburger-label span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+  .hamburger-checkbox:checked ~ .main-nav { transform: translateX(0); }
 
   .main-nav ul li .submenu {
     position: relative;

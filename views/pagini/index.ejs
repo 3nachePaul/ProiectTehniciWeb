@@ -39,36 +39,90 @@
             </section>
         </section>
 
-        <!-- ================================================================ -->
-        <!-- ======== SECȚIUNEA VIDEO A FOST ADĂUGATĂ AICI ======== -->
-        <!-- ================================================================ -->
-        <section id="video-intro" class="video-container-propriu">
-            <h2>Ghid Video</h2>
-            <p>Urmăriți ghidul nostru despre cum să preparați un espresso perfect.</p>
-            <video controls preload="metadata" poster="/resurse/video/poster_cafea.jpg">
-                <source src="/resurse/video/ice_coffee_pour.mp4" type="video/mp4">
-                <source src="/resurse/video/ice_coffee_pour.webm" type="video/webm">
-                <track src="/resurse/subtitrari/subtitrare_ro.vtt" kind="captions" srclang="ro" label="Română" default>
-                <track src="/resurse/subtitrari/subtitrare_en.vtt" kind="captions" srclang="en" label="English">
-                Browserul dumneavoastră nu suportă tag-ul video.
-            </video>
+        <!-- SECTIUNE VIDEO NOUA -->
+        <section id="video-intro">
+            <h2>Demonstrație Video</h2>
+            <p>Urmăriți cum se prepară o cafea perfectă în cafeneaua noastră.</p>
+            
+            <!-- Container adaugat pentru a controla dimensiunea -->
+            <div id="video-container">
+                <video controls preload="metadata" poster="/resurse/video/poster_cafea.jpg">
+                    <source src="/resurse/video/cafea.mp4" type="video/mp4">
+                    <source src="/resurse/video/cafea.webm" type="video/webm">
+                    <track src="/resurse/subtitrari/subtitrare_ro.vtt" kind="captions" srclang="ro" label="Română" default>
+                    <track src="/resurse/subtitrari/subtitrare_en.vtt" kind="captions" srclang="en" label="English">
+                    Browserul dumneavoastră nu suportă tag-ul video.
+                </video>
+            </div>
         </section>
-        <!-- ================================================================ -->
-        <!-- ================================================================ -->
-
 
         <section id="table">
             <h2>Menu</h2>
-            <!-- Continutul sectiunii Menu -->
+            <div class="table-container">
+                <table>
+                    <caption>Our Menu</caption>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Availability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Coffee</td>
+                            <td>$2.50</td>
+                            <td>Freshly brewed coffee</td>
+                            <td>In Stock</td>
+                        </tr>
+                        <tr>
+                            <td>Tea</td>
+                            <td>$2.00</td>
+                            <td>Selection of herbal teas</td>
+                            <td>In Stock</td>
+                        </tr>
+                        <tr>
+                            <td>Cake</td>
+                            <td>$3.00</td>
+                            <td>Delicious chocolate cake</td>
+                            <td>Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Sandwich</td>
+                            <td>$5.00</td>
+                            <td>Freshly made sandwich</td>
+                            <td>In Stock</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Prices may vary</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <article>
+                <h3>Drinks</h3>
+                <p>Explore our wide range of drinks.</p>
+                <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Juices</li>
+                </ul>
+            </article>
         </section>
 
         <section id="events">
             <h2>Events</h2>
+            <!-- Content for Events section -->
         </section>
 
         <section id="announcements">
             <h2>Announcements</h2>
-            <!-- Continutul sectiunii Announcements -->
+            <p><b>Coffee</b> is one of the most popular beverages in the world. It is made from roasted coffee beans, which are the seeds of berries from the <i>Coffea</i> plant. The two most common types of coffee beans are <b>Arabica</b> and <b>Robusta</b>.</p>
+            <p>The process of making coffee involves several steps, including <dfn>grinding</dfn> the beans, brewing, and serving. The <abbr title="International Coffee Organization">ICO</abbr> oversees the global coffee trade and ensures quality standards are met.</p>
+            <p><strong>Warning:</strong> Consuming too much coffee can lead to health issues such as insomnia and increased heart rate. It is recommended to limit your intake to a moderate amount.</p>
         </section>
         
         <section id="userAndStatistics">

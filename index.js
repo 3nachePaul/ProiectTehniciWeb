@@ -15,6 +15,7 @@ console.log("Folderul curent de lucru:", process.cwd());
 
 // Definirea folderului de resurse statice
 app.use("/resurse", express.static(path.join(__dirname, "resurse")));
+app.use("/css", express.static(path.join(__dirname, "css")));
 
 // Crearea folderelor temporare daca nu exista
 const vect_foldere = ["temp"]; // Am scos temp1 pentru curatenie
@@ -114,4 +115,3 @@ app.get('/:pagina', (req, res) => {
 app.listen(8080, () => {
     console.log("Serverul a pornit pe portul 8080");
 });
-
